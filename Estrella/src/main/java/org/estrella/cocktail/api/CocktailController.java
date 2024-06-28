@@ -1,5 +1,7 @@
 package org.estrella.cocktail.api;
 
+import org.estrella.cocktail.api.dto.response.CocktailInfoResDto;
+import org.estrella.cocktail.api.dto.response.CocktailListResDto;
 import org.estrella.cocktail.application.CocktailService;
 import org.estrella.cocktail.domain.Cocktail;
 import org.springframework.http.HttpStatus;
@@ -20,19 +22,18 @@ public class CocktailController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Cocktail>> getAllCocktails() {
-        List<Cocktail> cocktails = cocktailService.getAllCocktails();
-        return new ResponseEntity<>(cocktails, HttpStatus.OK);
+    public ResponseEntity<CocktailListResDto> getAllCocktails() {
+        CocktailListResDto cocktailListResDto = cocktailService.cocktailFindAll();
+        return new ResponseEntity<>(cocktailListResDto, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Cocktail> getCocktailById(@PathVariable Integer id) {
-        Cocktail cocktail = cocktailService.getCocktailById(id);
-        if (cocktail != null) {
-            return new ResponseEntity<>(cocktail, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    public ResponseEntity<?> getCocktailById(@PathVariable Integer id) {
+        CocktailInfoResDto cocktailInfoResDto = cocktailService.getCocktailById(id);
+        if (cocktailInfoResDto == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("칵테일이 존재하지 않습니다!");
         }
+        return ResponseEntity.ok(cocktailInfoResDto);
     }
 
 

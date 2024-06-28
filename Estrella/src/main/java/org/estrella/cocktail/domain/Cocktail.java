@@ -18,6 +18,5 @@ public class Cocktail {
     private String garnish;
     @Column(length = 1000)
     private String preparation;
-    @Column(length = 1000)
-    private String notes;
+//    private String image;
 }
