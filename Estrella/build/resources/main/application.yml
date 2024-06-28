@@ -1,1 +1,25 @@
-spring.application.name=Estrella
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cocktails
+    username: cocktails
+    password: ju932900!!
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        globally_quoted_identifiers: true
+    open-in-view: false
+
+logging:
+  level:
+    org.hibernate.spl: debug
+    org.hibernate.type: trace
+
+
