@@ -17,5 +17,7 @@ public interface CocktailRepository extends JpaRepository<Cocktail, Integer> {
 
     Page<Cocktail> findAll(Pageable pageable);
 
+    List<Cocktail> findByCategoryCategoryId(Integer categoryId);
+
 
 }
