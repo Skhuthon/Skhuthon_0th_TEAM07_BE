@@ -17,6 +17,5 @@ public interface CocktailRepository extends JpaRepository<Cocktail, Integer> {
 
     Page<Cocktail> findAll(Pageable pageable);
 
-    @Query("SELECT DISTINCT c.category FROM Cocktail c")
-    List<String> findAllCategories();
+
 }
