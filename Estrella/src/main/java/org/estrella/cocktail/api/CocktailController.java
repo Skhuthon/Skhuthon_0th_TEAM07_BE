@@ -160,5 +160,28 @@ public class CocktailController {
         List<Integer> randomIds = cocktailService.getRandomCocktailIds(count);
         return new ResponseEntity<>(randomIds, HttpStatus.OK);
     }
+    @GetMapping("/categories")
+    @Operation(
+            summary = "모든 칵테일 카테고리 조회",
+            description = "모든 칵테일 카테고리를 조회합니다.",
+            responses = {
+                    @ApiResponse(
+                            responseCode = "200",
+                            description = "성공",
+                            content = @Content(
+                                    mediaType = "application/json",
+                                    schema = @Schema(implementation = List.class),
+                                    examples = @ExampleObject(
+                                            name = "예제 데이터",
+                                            value = "[\"All Day Type Cocktail\", \"Before Dinner Cocktail\", \"After Dinner Cocktail\"]"
+                                    )
+                            )
+                    )
+            }
+    )
+    public ResponseEntity<List<String>> getAllCategories() {
+        List<String> categories = cocktailService.getAllCategories();
+        return new ResponseEntity<>(categories, HttpStatus.OK);
+    }
 
 }
