@@ -9,6 +9,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -48,6 +49,16 @@ public class CocktailService {
         Page<Cocktail> cocktailPage = cocktailRepository.findByKorNameContainingOrEngNameContaining(name, pageable);
         return cocktailPage.stream()
                 .map(Cocktail::getId)
+                .collect(Collectors.toList());
+    }
+
+    public List<Integer> getRandomCocktailIds(int n) {
+        List<Integer> allIds = cocktailRepository.findAll().stream()
+                .map(Cocktail::getId)
+                .collect(Collectors.toList());
+        Collections.shuffle(allIds);
+        return allIds.stream()
+                .limit(n)
                 .collect(Collectors.toList());
     }
 }

@@ -3,6 +3,7 @@ package org.estrella.cocktail.domain;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.estrella.category.domain.Category;
 
 @Entity
 @Data
@@ -20,7 +21,9 @@ public class Cocktail {
     private String ingredients;
     private String garnish;
     @Column(length = 1000)
-    private String preparation;
-//    private String image;
-    // private String color;
+    private String content;
+    private String image;
+    private String color;
+    private Integer abv;
+    private String category;
 }

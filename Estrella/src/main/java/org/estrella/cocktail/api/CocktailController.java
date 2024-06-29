@@ -137,4 +137,29 @@ public class CocktailController {
         return ResponseEntity.ok(ids);
     }
 
+    @GetMapping("/random")
+    @Operation(
+            summary = "랜덤 칵테일 ID 조회",
+            description = "지정된 개수의 랜덤 칵테일 ID를 조회합니다.",
+            responses = {
+                    @ApiResponse(
+                            responseCode = "200",
+                            description = "성공",
+                            content = @Content(
+                                    mediaType = "application/json",
+                                    examples = @ExampleObject(
+                                            name = "예제 데이터",
+                                            value = "[1, 2, 3]"
+                                    )
+                            )
+                    )
+            }
+    )
+    public ResponseEntity<List<Integer>> getRandomCocktailIds(
+            @Parameter(description = "조회할 랜덤 칵테일 ID의 개수", example = "3")
+            @RequestParam(name = "count", defaultValue = "5") int count) {
+        List<Integer> randomIds = cocktailService.getRandomCocktailIds(count);
+        return new ResponseEntity<>(randomIds, HttpStatus.OK);
+    }
+
 }

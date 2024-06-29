@@ -11,9 +11,11 @@ public record CocktailInfoResDto(
         String location,
         String ingredients,
         String garnish,
-        String preparation,
+        String content,
         String image,
-        String color
+        String color,
+        String category,
+        Integer abv
 
 
 ) {
@@ -25,9 +27,11 @@ public record CocktailInfoResDto(
                 .location(cocktail.getLocation())
                 .ingredients(cocktail.getIngredients())
                 .garnish(cocktail.getGarnish())
-                .preparation(cocktail.getPreparation())
-//                .image(cocktail.getImage())
-            //    .color(cocktail.getColor())
+                .content(cocktail.getContent())
+                .image(cocktail.getImage())
+                .color(cocktail.getColor())
+                .abv(cocktail.getAbv())
+                .category(cocktail.getCategory())
                 .build();
     }
 }
