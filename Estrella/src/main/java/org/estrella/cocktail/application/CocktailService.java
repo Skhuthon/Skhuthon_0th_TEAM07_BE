@@ -61,9 +61,6 @@ public class CocktailService {
                 .limit(n)
                 .collect(Collectors.toList());
     }
-    public List<String> getAllCategories() {
-        return cocktailRepository.findAllCategories();
-    }
 
 
 }
