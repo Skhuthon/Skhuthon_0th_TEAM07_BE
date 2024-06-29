@@ -25,5 +25,9 @@ public class Cocktail {
     private String image;
     private String color;
     private Integer abv;
-    private String category;
+    @Column(name = "category")
+    private String categoryName;
+    @ManyToOne
+    @JoinColumn(name = "categoryId")
+    private Category category;
 }
