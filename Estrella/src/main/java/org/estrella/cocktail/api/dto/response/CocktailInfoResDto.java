@@ -12,7 +12,8 @@ public record CocktailInfoResDto(
         String ingredients,
         String garnish,
         String preparation,
-        String image
+        String image,
+        String color
 
 
 ) {
@@ -26,6 +27,7 @@ public record CocktailInfoResDto(
                 .garnish(cocktail.getGarnish())
                 .preparation(cocktail.getPreparation())
 //                .image(cocktail.getImage())
+                .color(cocktail.getColor())
                 .build();
     }
 }
