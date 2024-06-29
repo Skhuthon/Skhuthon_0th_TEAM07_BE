@@ -51,8 +51,10 @@ public class CocktailController {
                     )
             }
     )
-    public ResponseEntity<CocktailListResDto> getAllCocktails() {
-        CocktailListResDto cocktailListResDto = cocktailService.cocktailFindAll();
+    public ResponseEntity<CocktailListResDto> getAllCocktails(
+            @RequestParam(name = "page", defaultValue = "0") int page,
+            @RequestParam(name = "size", defaultValue = "10") int size) {
+        CocktailListResDto cocktailListResDto = cocktailService.cocktailFindAll(page, size);
         return new ResponseEntity<>(cocktailListResDto, HttpStatus.OK);
     }
 
@@ -124,8 +126,11 @@ public class CocktailController {
                     )
             }
     )
-    public ResponseEntity<?> findCocktailIdsByName(@Parameter(description = "검색할 칵테일의 영어 이름 또는 한글 이름의 일부", example = "모히 or Mo")@RequestParam(name= "name") String name) {
-        List<Integer> ids = cocktailService.findCocktailIdsByName(name);
+    public ResponseEntity<?> findCocktailIdsByName(
+            @Parameter(description = "검색할 칵테일의 영어 이름 또는 한글 이름의 일부", example = "모히 or Mo") @RequestParam(name= "name") String name,
+            @RequestParam(name = "page", defaultValue = "0") int page,
+            @RequestParam(name = "size", defaultValue = "10") int size) {
+        List<Integer> ids = cocktailService.findCocktailIdsByName(name, page, size);
         if (ids.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"message\": \"칵테일을 찾을 수 없습니다.\"}");
         }
