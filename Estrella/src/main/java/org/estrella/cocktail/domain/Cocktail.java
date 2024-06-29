@@ -22,5 +22,5 @@ public class Cocktail {
     @Column(length = 1000)
     private String preparation;
 //    private String image;
-    private String color;
+    // private String color;
 }

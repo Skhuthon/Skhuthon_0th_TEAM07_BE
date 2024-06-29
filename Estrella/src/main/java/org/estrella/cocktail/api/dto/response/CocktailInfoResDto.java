@@ -27,7 +27,7 @@ public record CocktailInfoResDto(
                 .garnish(cocktail.getGarnish())
                 .preparation(cocktail.getPreparation())
 //                .image(cocktail.getImage())
-                .color(cocktail.getColor())
+            //    .color(cocktail.getColor())
                 .build();
     }
 }
