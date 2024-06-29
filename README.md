@@ -1,1 +1,7 @@
-💡 스쿠톤 0기 7팀 백엔드 레포지토리입니다.
+<div align='center'>
+
+### 스쿠톤 7팀 <br/> Team Estrella, <b>Estrella Service</b> BackEnd
+
+#### 추가될 예정입니다!
+
+</div>
