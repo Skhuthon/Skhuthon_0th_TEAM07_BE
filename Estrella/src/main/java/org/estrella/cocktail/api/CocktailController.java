@@ -10,7 +10,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.estrella.cocktail.api.dto.response.CocktailInfoResDto;
 import org.estrella.cocktail.api.dto.response.CocktailListResDto;
 import org.estrella.cocktail.application.CocktailService;
-import org.estrella.cocktail.domain.Cocktail;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -43,8 +42,8 @@ public class CocktailController {
                                     examples = @ExampleObject(
                                             name = "예제 데이터",
                                             value = "{\"cocktails\": ["
-                                                    + "{\"id\": 1, \"korName\": \"모히토\", \"engName\": \"Mojito\", \"location\": \"쿠바\", \"ingredients\": \"럼, 라임, 민트\", \"garnish\": \"민트 잎\", \"preparation\": \"민트잎에 라임즙을 섞고 럼을 넣고 소다를 넣는다\", \"image\": \"image_url_here\"},"
-                                                    + "{\"id\": 2, \"korName\": \"마가리타\", \"engName\": \"Margarita\", \"location\": \"멕시코\", \"ingredients\": \"테킬라, 라임, 트리플세크 시럽\", \"garnish\": \"라임 슬라이스\", \"preparation\": \"얼음으로 재료를 흔든 후 유리컵에 담는다\", \"image\": \"image_url_here\"}"
+                                                    + "{\"id\": 1, \"korName\": \"모히토\", \"engName\": \"Mojito\", \"location\": \"쿠바\", \"ingredients\": \"럼, 라임, 민트\", \"garnish\": \"민트 잎\", \"content\": \"민트잎에 라임즙을 섞고 럼을 넣고 소다를 넣는다\", \"image\": \"image_url\", \"color\": \"green\", \"category\": \"Before Dinner Cocktail\", \"abv\": 14},"
+                                                    + "{\"id\": 2, \"korName\": \"마가리타\", \"engName\": \"Margarita\", \"location\": \"멕시코\", \"ingredients\": \"테킬라, 라임, 트리플세크 시럽\", \"garnish\": \"라임 슬라이스\", \"content\": \"얼음으로 재료를 흔든 후 유리컵에 담는다\", \"image\": \"image_url\", \"color\": \"yellow\", \"category\": \"All Day Type Cocktail\", \"abv\": 18}"
                                                     + "]}"
                                     )
                             )
@@ -71,7 +70,7 @@ public class CocktailController {
                                     schema = @Schema(implementation = CocktailInfoResDto.class),
                                     examples = @ExampleObject(
                                             name = "예제 데이터",
-                                            value = "{\"id\": 1, \"korName\": \"모히토\", \"engName\": \"Mojito\", \"location\": \"쿠바\", \"ingredients\": \"럼, 라임, 민트\", \"garnish\": \"민트 잎\", \"preparation\": \"민트잎에 라임즙을 섞고 럼을 넣고 소다를 넣는다.\", \"image\": \"image_url_here\"}"
+                                            value = "{\"id\": 1, \"korName\": \"모히토\", \"engName\": \"Mojito\", \"location\": \"쿠바\", \"ingredients\": \"럼, 라임, 민트\", \"garnish\": \"민트 잎\", \"content\": \"민트잎에 라임즙을 섞고 럼을 넣고 소다를 넣는다.\", \"image\": \"image_url_here\", \"color\": \"green\", \"category\": \"Tropical\", \"abv\": 14}"
                                     )
                             )
                     ),
