@@ -14,7 +14,7 @@ public record CocktailInfoResDto(
         String content,
         String image,
         String color,
-        String category,
+        String categoryName,
         Integer abv
 
 
@@ -31,7 +31,7 @@ public record CocktailInfoResDto(
                 .image(cocktail.getImage())
                 .color(cocktail.getColor())
                 .abv(cocktail.getAbv())
-                .category(cocktail.getCategory())
+                .categoryName(cocktail.getCategoryName())
                 .build();
     }
 }
