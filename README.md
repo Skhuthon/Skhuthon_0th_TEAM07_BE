@@ -1,6 +1,6 @@
 <div align="center">
 
-### 스쿠톤 7팀 <br/> Team Estrella, <b>Estrella Service</b> FrontEnd
+### 스쿠톤 7팀 <br/> Team Estrella, <b>Estrella Service</b> BackEnd
 
 <b>Estrella Service</b>
 
