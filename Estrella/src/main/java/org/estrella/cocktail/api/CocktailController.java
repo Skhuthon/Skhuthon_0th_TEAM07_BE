@@ -42,8 +42,12 @@ public class CocktailController {
                                     examples = @ExampleObject(
                                             name = "예제 데이터",
                                             value = "{\"cocktails\": ["
-                                                    + "{\"id\": 1, \"korName\": \"모히토\", \"engName\": \"Mojito\", \"location\": \"쿠바\", \"ingredients\": \"럼, 라임, 민트\", \"garnish\": \"민트 잎\", \"content\": \"민트잎에 라임즙을 섞고 럼을 넣고 소다를 넣는다\", \"image\": \"image_url\", \"color\": \"green\", \"category\": \"Before Dinner Cocktail\", \"abv\": 14},"
-                                                    + "{\"id\": 2, \"korName\": \"마가리타\", \"engName\": \"Margarita\", \"location\": \"멕시코\", \"ingredients\": \"테킬라, 라임, 트리플세크 시럽\", \"garnish\": \"라임 슬라이스\", \"content\": \"얼음으로 재료를 흔든 후 유리컵에 담는다\", \"image\": \"image_url\", \"color\": \"yellow\", \"category\": \"All Day Type Cocktail\", \"abv\": 18}"
+                                                    + "{\"id\": 1, \"korName\": \"아페롤 스프릿\", \"engName\": \"Aperol Spritz\", \"location\": \"이탈리아\", \"ingredients\": \"3온스 프로세코, 2온스 아페롤, 스플래시 소다수(약 1온스)\", \"garnish\": \"오렌지 슬라이스\", \"content\": \"1. 와인 잔에 얼음을 채우고 잔이 차가워질 때까지 약 30초 동안 냉장 보관합니다. \n" +
+                                                    "2. 프로세코, 아페롤, 소다수를 넣고 가볍게 저어 섞습니다. \n" +
+                                                    "3. 오렌지 슬라이스로 장식합니다.\", \"image\": \"https://hips.hearstapps.com/hmg-prod/images/aperol-spritz-lead-64763b54778bc.jpg?crop=1xw:1xh;center,top&resize=980:*\", \"color\": \"red\", \"category\": \"Aperitif Cocktail\", \"abv\": 8},"
+                                                    + "{\"id\": 2, \"korName\": \"에이비에이션\", \"engName\": \"Aviation\", \"location\": \"뉴욕\", \"ingredients\": \"진 2온스, 마라스키노 리큐어 1/4온스, 크렘 드 바이올렛 리큐어 1/4온스, 레몬즙 1/2온스\", \"garnish\": \"구운 레몬 껍질\", \"content\": \"1. 얼음을 채운 칵테일 셰이커에 진, 리큐어, 레몬즙을 붓습니다. \n" +
+                                                    "2.차가운 칵테일 글라스에 따라줍니다. \n" +
+                                                    "3. 구운 레몬 껍질로 장식합니다.\", \"image\": \"https://www.thespruceeats.com/thmb/fA8u5yMunR2O9je6zBbSZpSXgUM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/aviation-cocktail-recipe-760055-hero-01-af5233300c184476b02891de2c685b2a.jpg\", \"color\": \"purplpe\", \"category\": \"Before Dinner Cocktail\", \"abv\": 27}"
                                                     + "]}"
                                     )
                             )
