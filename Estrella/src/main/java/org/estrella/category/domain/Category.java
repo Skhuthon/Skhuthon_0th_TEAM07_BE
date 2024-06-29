@@ -2,7 +2,6 @@ package org.estrella.category.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Generated;
 import org.estrella.cocktail.domain.Cocktail;
 
 import java.util.List;
@@ -16,4 +15,8 @@ public class Category {
 
     @Column(nullable = false)
     private String name;
+
+    @OneToMany(mappedBy = "category")
+    private List<Cocktail> cocktails;
 }
+
