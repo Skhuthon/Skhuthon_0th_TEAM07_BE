@@ -76,11 +76,11 @@
 
   <div align="center">
   <!-- FE Stack -->
-    <table border=""4>
+    <table border="4">
       <th align="center">역할</th>
       <th align="center" colspan="2">프레임워크</th>
       <tr>
-        <td rowspan="3" align="center"><b>프론트엔드</td>
+        <td rowspan="3" align="center"><b>프론트엔드</b></td>
         <td><img src="https://staging.svgrepo.com/show/354259/react.svg" width="16px" alt="_icon" />&nbsp;&nbsp;<b>React</b></td>
         <td>유저 인터페이스 개발</td>
       </tr>
@@ -89,29 +89,37 @@
         <td>컴포넌트 디자인</td>
       </tr>
       <tr>
-        <td><img src="https://staging.svgrepo.com/show/349419/javascript.svg" width="16px" alt="_icon" />&nbsp;&nbsp;<b>JavaScript</td>
+        <td><img src="https://staging.svgrepo.com/show/349419/javascript.svg" width="16px" alt="_icon" />&nbsp;&nbsp;<b>JavaScript</b></td>
         <td>프론트엔드 주 언어</td>
       </tr>
       <!-- BE Stack -->
       <tr>
-        <td rowspan="4" align="center"><b>백엔드</td>
-        <td><img src="https://user-images.githubusercontent.com/112257466/209075018-0a1f7f14-a910-4d16-a4e4-51929b99e1ae.png" width="16px" alt="_icon" />&nbsp;&nbsp;<b>Java17-Spring</td>
+        <td rowspan="6" align="center"><b>백엔드</b></td>
+        <td><img src="https://user-images.githubusercontent.com/112257466/209075018-0a1f7f14-a910-4d16-a4e4-51929b99e1ae.png" width="16px" alt="_icon" />&nbsp;&nbsp;<b>Java17-Spring</b></td>
         <td rowspan="2">백엔드 서버 프레임워크</td>
       </tr>
       <tr>
-        <td><img src="https://user-images.githubusercontent.com/112257466/209075280-78be8487-7d6a-485c-92a8-d6677f0caab9.png" width="16px" alt="_icon" />&nbsp;&nbsp;<b>Spring Boot</td>
+        <td><img src="https://user-images.githubusercontent.com/112257466/209075280-78be8487-7d6a-485c-92a8-d6677f0caab9.png" width="16px" alt="_icon" />&nbsp;&nbsp;<b>Spring Boot</b></td>
+      </tr>
       <tr>
-        <td><img src="https://user-images.githubusercontent.com/112257466/209078356-d9120e3d-9498-4ee4-a38d-139a263910f4.png" width="16px" alt="_icon" />&nbsp;&nbsp;<b>MySQL</td>
+        <td><img src="https://user-images.githubusercontent.com/112257466/209078356-d9120e3d-9498-4ee4-a38d-139a263910f4.png" width="16px" alt="_icon" />&nbsp;&nbsp;<b>MySQL</b></td>
         <td>메인 데이터베이스</td>
       </tr>
       <tr>
-        <td><img src="https://staging.svgrepo.com/show/354420/swagger.svg" width="16px" alt="_icon" />&nbsp;&nbsp;<b>Swagger</td>
+        <td><img src="https://staging.svgrepo.com/show/354420/swagger.svg" width="16px" alt="_icon" />&nbsp;&nbsp;<b>Swagger</b></td>
         <td>API 문서</td>
+      </tr>
+      <tr>
+        <td><img src="https://staging.svgrepo.com/show/373623/git.svg" width="16px" alt="_icon" />&nbsp;&nbsp;<b>Git</b></td>
+        <td>버전 관리</td>
+      </tr>
+      <tr>
+        <td><img src="https://static-00.iconduck.com/assets.00/file-type-nginx-icon-1793x2048-yt5u3fm7.png" width="16px" alt="_icon" />&nbsp;&nbsp;<b>Nginx</b></td>
+        <td>웹 서버</td>
       </tr>
     </table>
   </div>
   <br/><hr/>
-
 # Database ERD
 
 <img src = "https://github.com/Skhuthon/Skhuthon_0th_TEAM07_FE/assets/141125424/6627364a-ff0d-44d4-86fd-db10daa27d41"/>
