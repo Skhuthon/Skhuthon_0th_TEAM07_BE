@@ -1,8 +1,11 @@
 spring:
+  profiles:
+    active: prod
   datasource:
-    url: jdbc:mysql://localhost:3306/cocktails
-    username: cocktails
-    password: ju932900!!
+    url: ${spring.datasource.url}
+    username: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    driver-class-name: ${spring.datasource.driver-class-name}
 
   jpa:
     hibernate:
