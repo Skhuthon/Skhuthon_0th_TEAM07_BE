@@ -10,6 +10,9 @@ public interface CategoryRepository extends JpaRepository<Category, Integer> {
     @Query("SELECT c.name FROM Category c")
     List<String> findAllCategoryNames();
 
+    @Query("SELECT c.categoryId FROM Category c")
+    List<Integer> findAllCategoryIds();
+
 
 
 }

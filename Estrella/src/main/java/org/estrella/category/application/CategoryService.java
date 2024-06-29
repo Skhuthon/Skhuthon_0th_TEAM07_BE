@@ -22,6 +22,9 @@ public class CategoryService {
     public List<String> getAllCategoryNames() {
         return categoryRepository.findAllCategoryNames();
     }
+    public List<Integer> getAllCategoryIds() {
+        return categoryRepository.findAllCategoryIds();
+    }
 
     public List<CocktailInfoResDto> getCocktailsByCategoryId(Integer categoryId) {
         return cocktailRepository.findByCategoryCategoryId(categoryId).stream()

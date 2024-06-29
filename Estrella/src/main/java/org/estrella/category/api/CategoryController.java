@@ -30,8 +30,8 @@ public class CategoryController {
 
     @GetMapping
     @Operation(
-            summary = "모든 칵테일 카테고리 조회",
-            description = "모든 칵테일 카테고리를 조회합니다.",
+            summary = "모든 칵테일 카테고리 ID 조회",
+            description = "모든 칵테일 카테고리 ID를 조회합니다.",
             responses = {
                     @ApiResponse(
                             responseCode = "200",
@@ -41,15 +41,15 @@ public class CategoryController {
                                     schema = @Schema(implementation = List.class),
                                     examples = @ExampleObject(
                                             name = "예제 데이터",
-                                            value = "[\"All Day Type Cocktail\", \"Before Dinner Cocktail\", \"After Dinner Cocktail\"]"
+                                            value = "[1, 2, 3, 4]"
                                     )
                             )
                     )
             }
     )
-    public ResponseEntity<List<String>> getAllCategoryNames() {
-        List<String> categoryNames = categoryService.getAllCategoryNames();
-        return new ResponseEntity<>(categoryNames, HttpStatus.OK);
+    public ResponseEntity<List<Integer>> getAllCategoryNames() {
+        List<Integer> categoryIds = categoryService.getAllCategoryIds();
+        return new ResponseEntity<>(categoryIds, HttpStatus.OK);
     }
 
     @GetMapping("/{categoryId}")
