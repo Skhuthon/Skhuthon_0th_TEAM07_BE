@@ -120,6 +120,7 @@
     </table>
   </div>
   <br/><hr/>
+  
 # Database ERD
 
 <img src = "https://github.com/Skhuthon/Skhuthon_0th_TEAM07_FE/assets/141125424/6627364a-ff0d-44d4-86fd-db10daa27d41"/>
