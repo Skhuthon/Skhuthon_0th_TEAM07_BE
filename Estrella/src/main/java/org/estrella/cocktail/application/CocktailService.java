@@ -7,6 +7,8 @@ import org.estrella.cocktail.domain.CocktailRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class CocktailService {
@@ -33,4 +35,10 @@ public class CocktailService {
         return CocktailInfoResDto.from(cocktail);
     }
 
+    public List<Integer> findCocktailIdsByName(String name) {
+        List<Cocktail> cocktails = cocktailRepository.findByKorNameContainingOrEngNameContaining(name);
+        return cocktails.stream()
+                .map(Cocktail::getId)
+                .collect(Collectors.toList());
+    }
 }
